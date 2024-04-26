@@ -18,6 +18,7 @@ public class MetallicMaterial extends Material {
         Vector3 reflected = reflect(unitVector(r_In.getDirection()), hitData.normal);
         scattered.setOrigin(hitData.point);
         scattered.setDirection(add(reflected, multiply(randomUnitVec3(), fuzz)));
+        scattered.setTime(r_In.getTime());
         attenuation.x = albedo.x;
         attenuation.y = albedo.y;
         attenuation.z = albedo.z;

@@ -4,37 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d9d3956-cc07-464f-bbb5-093846c80ab2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RayTracer.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/vtko/raytracing/Camera.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/vtko/raytracing/Color.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/vtko/raytracing/DielectrictMaterial.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/vtko/raytracing/HitData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/vtko/raytracing/Hittable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/vtko/raytracing/HittableList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/vtko/raytracing/Interval.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/vtko/raytracing/LambertianMaterial.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/vtko/raytracing/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/vtko/raytracing/Material.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/vtko/raytracing/MetallicMaterial.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/vtko/raytracing/Point.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/vtko/raytracing/Ray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/vtko/raytracing/Sphere.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/vtko/raytracing/Util.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/vtko/raytracing/Vector3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/output.ppm" afterDir="false" />
+    <list default="true" id="0d9d3956-cc07-464f-bbb5-093846c80ab2" name="Changes" comment="Ray Tracing in One Weekend book finished.">
+      <change afterPath="$PROJECT_DIR$/src/org/vtko/raytracing/AABB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/vtko/raytracing/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/vtko/raytracing/Camera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/vtko/raytracing/DielectrictMaterial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/vtko/raytracing/DielectrictMaterial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/vtko/raytracing/Interval.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/vtko/raytracing/Interval.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/vtko/raytracing/LambertianMaterial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/vtko/raytracing/LambertianMaterial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/vtko/raytracing/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/vtko/raytracing/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/vtko/raytracing/MetallicMaterial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/vtko/raytracing/MetallicMaterial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/vtko/raytracing/Ray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/vtko/raytracing/Ray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/vtko/raytracing/Sphere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/vtko/raytracing/Sphere.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="AUTO_SHOW_ERRORS_IN_EDITOR" value="false" />
+    <option name="DISPLAY_NOTIFICATION_POPUP" value="false" />
+    <option name="CLEAR_OUTPUT_DIRECTORY" value="false" />
+    <option name="REBUILD_ON_DEPENDENCY_CHANGE" value="false" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -62,8 +55,10 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/vitor/Github/Dart/WeatherApp&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -71,6 +66,7 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;/home/vitor/Github/Java/RayTracer/src/Main.java&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -86,7 +82,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-78a6f59c" />
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
       </set>
     </attachedChunks>
   </component>
@@ -104,11 +101,38 @@
       <workItem from="1711627061719" duration="943000" />
       <workItem from="1711707393484" duration="131000" />
       <workItem from="1711723174285" duration="3747000" />
-      <workItem from="1711739985361" duration="10710000" />
+      <workItem from="1711739985361" duration="12080000" />
+      <workItem from="1711834612235" duration="1039000" />
+      <workItem from="1711837345038" duration="764000" />
+      <workItem from="1711986179554" duration="810000" />
+      <workItem from="1711988073354" duration="220000" />
+      <workItem from="1712055342576" duration="1926000" />
+      <workItem from="1712075425817" duration="301000" />
+      <workItem from="1712085829376" duration="867000" />
+      <workItem from="1712177705069" duration="17000" />
+      <workItem from="1712177961365" duration="1847000" />
+      <workItem from="1712312982443" duration="1571000" />
+      <workItem from="1712420782927" duration="574000" />
+      <workItem from="1712437929494" duration="90000" />
+      <workItem from="1712575912628" duration="224000" />
+      <workItem from="1712577749158" duration="12000" />
     </task>
+    <task id="LOCAL-00001" summary="Ray Tracing in One Weekend book finished.">
+      <option name="closed" value="true" />
+      <created>1711759256726</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1711759256726</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Ray Tracing in One Weekend book finished." />
+    <option name="LAST_COMMIT_MESSAGE" value="Ray Tracing in One Weekend book finished." />
   </component>
 </project>

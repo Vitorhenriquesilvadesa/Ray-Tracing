@@ -118,8 +118,8 @@ public class Camera {
 
         Vector3 rayOrigin = (defocusAngle <= 0) ? center : defocusDiskSample();
         Vector3 rayDirection = subtract(pixelSample, rayOrigin);
-
-        return new Ray(rayOrigin, rayDirection);
+        float rayTime = randomNumber();
+        return new Ray(rayOrigin, rayDirection, rayTime);
     }
 
     private Vector3 defocusDiskSample() {

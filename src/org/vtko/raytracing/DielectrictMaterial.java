@@ -36,6 +36,7 @@ public class DielectrictMaterial extends Material {
 
         scattered.setOrigin(hitData.point);
         scattered.setDirection(direction);
+        scattered.setTime(r_In.getTime());
         return true;
     }
 

@@ -4,19 +4,34 @@ import static org.vtko.raytracing.Vector3.*;
 
 public class Sphere extends Hittable {
 
-    private Vector3 center;
+    private Vector3 center1;
     private float radius;
     private Material material;
+    private boolean isMoving;
+    private Vector3 centerVector;
 
     public Sphere(Vector3 center, float radius, Material material) {
-        this.center = center;
+        this.center1 = center;
         this.radius = radius;
         this.material = material;
+        this.isMoving = false;
+    }
+
+    public Sphere(Vector3 center1, Vector3 center2 , float radius, Material material) {
+        this.radius = radius;
+        this.center1 = center1;
+        this.material = material;
+        this.isMoving = true;
+        this.centerVector = subtract(center2, center1);
+    }
+
+    public Vector3 center(float time) {
+        return add(center1, multiply(centerVector, time));
     }
 
     @Override
     public boolean hit(Ray ray, Interval rayT, HitData hitData) {
-
+        Vector3 center = isMoving ? center(ray.getTime()) : center1;
         Vector3 oc = subtract(ray.getOrigin(), center);
         float a = ray.getDirection().lengthSquared();
         float halfB = dot(oc, ray.getDirection());
@@ -42,9 +57,9 @@ public class Sphere extends Hittable {
 
         hitData.t = root;
         hitData.point = ray.at(hitData.t);
-        hitData.normal = divide(subtract(hitData.point, center), radius);
+        hitData.normal = divide(subtract(hitData.point, center1), radius);
 
-        Vector3 outwardNormal = divide(subtract(hitData.point, center), radius);
+        Vector3 outwardNormal = divide(subtract(hitData.point, center1), radius);
         hitData.setFaceNormal(ray, outwardNormal);
         hitData.material = this.material;
 

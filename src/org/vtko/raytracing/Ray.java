@@ -52,4 +52,8 @@ public class Ray {
     public void setDirection(Vector3 direction) {
         this.direction = direction;
     }
+
+    public void setTime(float time) {
+        this.time = time;
+    }
 }

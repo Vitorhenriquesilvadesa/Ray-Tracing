@@ -22,6 +22,11 @@ public class Interval {
         return min <= x && x <= max;
     }
 
+    public Interval expand(float delta) {
+        float padding = delta / 2f;
+        return new Interval(min - padding, max + padding);
+    }
+
     public boolean surrounds(float x) {
         return min < x && x < max;
     }

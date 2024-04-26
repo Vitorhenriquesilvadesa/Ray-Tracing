@@ -7,8 +7,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import static org.vtko.raytracing.Util.*;
-import static org.vtko.raytracing.Vector3.multiply;
-import static org.vtko.raytracing.Vector3.subtract;
+import static org.vtko.raytracing.Vector3.*;
 
 public class Main {
 
@@ -72,7 +71,8 @@ public class Main {
                         // diffuse
                         var albedo = multiply(randomUnitVec3(), randomVec3());
                         sphere_material = new LambertianMaterial(albedo);
-                        world.add(new Sphere(center, 0.2f, sphere_material));
+                        Vector3 center2 = add(center, new Vector3(0, randomNumber(0, 0.5f), 0));
+                        world.add(new Sphere(center, center2, 0.2f, sphere_material));
                     } else if (choose_mat < 0.95) {
                         // metal
                         var albedo = randomVec3(0.5f, 1f);
@@ -100,8 +100,8 @@ public class Main {
         Camera cam = new Camera();
 
         cam.aspectRatio = 16.0f / 9.0f;
-        cam.imageWidth = 3120;
-        cam.samplesPerPixel = 50;
+        cam.imageWidth = 400;
+        cam.samplesPerPixel = 100;
         cam.maxDepth = 20;
 
         cam.vFov = 20;

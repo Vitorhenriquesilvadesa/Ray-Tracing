@@ -21,6 +21,7 @@ public class LambertianMaterial extends Material{
 
         scattered.setOrigin(hitData.point);
         scattered.setDirection(scatterDirection);
+        scattered.setTime(r_In.getTime());
 
         // Attenuation poderia ser albedo / p onde p é uma probabilidade fixa.
         attenuation.x = albedo.x;
